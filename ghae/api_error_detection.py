@@ -10,11 +10,26 @@ _KEY_MESSAGE = "message"
 _KEY_STATUS = "status"
 
 
-def detect_github_api_error(request_url, api_data):
-	if isinstance(api_data, dict):
-		message = api_data.get(_KEY_MESSAGE)
-		doc_url = api_data.get(_KEY_DOCUMENTATION_URL)
-		status = api_data.get(_KEY_STATUS)
+def detect_github_api_error(request_url, api_response_data):
+	"""
+	This function examines data from the GitHub API and raises a GitHubAPIError
+	if the data is the result of an erroneous request. It is the case if the
+	data is a dictionary whose keys are "message", "documentation_url" and
+	"status".
+
+	Args:
+		request_url (str): the URL of the request for the given data.
+		api_response_data: the object returned by the parsing of the response's
+			content, which is in JSON.
+
+	Raises:
+		GitHubAPIError: if the examined data is the result of an erroenous
+			request.
+	"""
+	if isinstance(api_response_data, dict):
+		message = api_response_data.get(_KEY_MESSAGE)
+		doc_url = api_response_data.get(_KEY_DOCUMENTATION_URL)
+		status = api_response_data.get(_KEY_STATUS)
 
 		if message is not None and doc_url is not None and status is not None:
 			raise GitHubAPIError(message, doc_url, status, request_url)

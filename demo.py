@@ -1,3 +1,9 @@
+"""
+This script shows how function detect_github_api_error helps determining
+whether a response from the GitHub API is the result of an erroneous request.
+"""
+
+
 from argparse import\
 	ArgumentParser
 import json
@@ -10,7 +16,7 @@ from ghae import\
 
 
 def make_arg_parser():
-	parser = ArgumentParser()
+	parser = ArgumentParser(description=__doc__)
 	parser.add_argument("-r", "--repository",
 		required=True,
 		help="A GitHub repository's name in the form <owner>/<name>")
