@@ -1,3 +1,5 @@
+from argparse import\
+	ArgumentParser
 import json
 import requests
 import sys
@@ -7,16 +9,24 @@ from ghae import\
 	GitHubAPIError
 
 
-try:
-	repo_name = sys.argv[1]
-except IndexError:
-	print("Provide a GitHub repository's name in the format <owner>/<name> as an argument.")
-	sys.exit(1)
+def make_arg_parser():
+	parser = ArgumentParser()
+	parser.add_argument("-r", "--repository",
+		required=True,
+		help="A GitHub repository's name in the form <owner>/<name>")
 
+	return parser
+
+
+args = make_arg_parser().parse_args()
+repo_name = args.repository
+
+# Request sending and response parsing
 repo_url = f"https://api.github.com/repos/{repo_name}"
 repo_response = requests.get(repo_url)
 repo_data = json.loads(repo_response.content)
 
+# Error detection
 try:
 	detect_github_api_error(repo_url, repo_data)
 except GitHubAPIError as ge:
