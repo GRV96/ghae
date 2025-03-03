@@ -12,7 +12,7 @@ import sys
 
 from ghae import\
 	detect_github_api_error,\
-	GitHubAPIError
+	GitHubApiError
 
 
 def make_arg_parser():
@@ -35,7 +35,7 @@ repo_data = json.loads(repo_response.content)
 # Error detection
 try:
 	detect_github_api_error(repo_url, repo_data)
-except GitHubAPIError as ge:
+except GitHubApiError as ge:
 	print(ge)
 	sys.exit(1)
 

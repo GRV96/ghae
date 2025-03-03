@@ -2,7 +2,7 @@
 
 
 from .github_api_error import\
-	GitHubAPIError
+	GitHubApiError
 
 
 _KEY_DOCUMENTATION_URL = "documentation_url"
@@ -12,7 +12,7 @@ _KEY_STATUS = "status"
 
 def detect_github_api_error(request_url, api_response_data):
 	"""
-	This function examines data from the GitHub API and raises a GitHubAPIError
+	This function examines data from the GitHub API and raises a GitHubApiError
 	if the data is the result of an erroneous request. It is the case if the
 	data is a dictionary whose keys are "message", "documentation_url" and
 	"status".
@@ -23,7 +23,7 @@ def detect_github_api_error(request_url, api_response_data):
 			content, which is in JSON.
 
 	Raises:
-		GitHubAPIError: if the examined data is the result of an erroenous
+		GitHubApiError: if the examined data is the result of an erroenous
 			request.
 	"""
 	if isinstance(api_response_data, dict):
@@ -32,7 +32,7 @@ def detect_github_api_error(request_url, api_response_data):
 		status = api_response_data.get(_KEY_STATUS)
 
 		if message is not None and doc_url is not None and status is not None:
-			raise GitHubAPIError(message, doc_url, status, request_url)
+			raise GitHubApiError(message, doc_url, status, request_url)
 
 
 __all__ = [detect_github_api_error.__name__]

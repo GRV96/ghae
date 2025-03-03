@@ -1,7 +1,7 @@
 # __all__ declared at the module's end
 
 
-class GitHubAPIError(Exception):
+class GitHubApiError(Exception):
 	"""
 	This exception can be raised when a request to the GitHub API fails.
 	"""
@@ -59,4 +59,4 @@ class GitHubAPIError(Exception):
 		return self._req_url
 
 
-__all__ = [GitHubAPIError.__name__]
+__all__ = [GitHubApiError.__name__]
