@@ -3,7 +3,7 @@
 
 class GitHubAPIError(Exception):
 	"""
-	This exception is raised when a request to the GitHub API fails.
+	This exception can be raised when a request to the GitHub API fails.
 	"""
 
 	def __init__(self, message, doc_url, status, req_url):
