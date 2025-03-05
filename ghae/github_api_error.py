@@ -14,7 +14,7 @@ class GitHubApiError(Exception):
 			message (str): the error message.
 			doc_url (str): the URL to the error's documentation.
 			status (str): the response's status code.
-			req_url (str): the problematic request's URL.
+			req_url (str): the erroneous request's URL.
 		"""
 		self._message = message
 		self._doc_url = doc_url
@@ -54,7 +54,7 @@ class GitHubApiError(Exception):
 	@property
 	def req_url(self):
 		"""
-		str: the problematic request's URL.
+		str: the erroneous request's URL.
 		"""
 		return self._req_url
 
