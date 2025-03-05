@@ -73,7 +73,7 @@ a `GitHubApiError` if the data is the result of an erroneous request. The data
 must be an object returned by the parsing of the response's content, which is
 in JSON.
 
-The user should not raise a `GitHubApiError` by themself and instead rely on
+The user should not raise a `GitHubApiError` themself and instead rely on
 `detect_github_api_error`.
 
 For more information, consult the documentation and the demo in the source code
