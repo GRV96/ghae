@@ -1,12 +1,16 @@
 """
-This script shows how function detect_github_api_error helps determining
-whether a response from the GitHub API is the result of an erroneous request.
-It also constitutes an example of handling a GitHubApiError.
+The demo shows how function detect_github_api_error helps determining whether a
+response from the GitHub API is the result of an erroneous request. It also
+constitutes an example of handling a GitHubApiError.
+
+This script sends a request for a repository's data to the GitHub API. If the
+request is valid, the script displays some information in the console.
 """
 
 
 from argparse import\
-	ArgumentParser
+	ArgumentParser,\
+	RawDescriptionHelpFormatter
 import json
 import requests
 import sys
@@ -16,8 +20,9 @@ from ghae import\
 	GitHubApiError
 
 
-def make_arg_parser():
-	parser = ArgumentParser(description=__doc__)
+def _make_arg_parser():
+	parser = ArgumentParser(
+		description=__doc__, formatter_class=RawDescriptionHelpFormatter)
 	parser.add_argument("-r", "--repository",
 		required=True,
 		help="A GitHub repository's name in the form <owner>/<name>")
@@ -25,7 +30,7 @@ def make_arg_parser():
 	return parser
 
 
-args = make_arg_parser().parse_args()
+args = _make_arg_parser().parse_args()
 repo_name = args.repository
 
 # Request sending and response parsing
