@@ -35,10 +35,10 @@ pip install -r requirements-dev.txt
 
 ### Démo
 
-La démo montre comment déterminer qu'une réquête à l'API de GitHub est erronée.
+La démo montre comment déterminer qu'une requête à l'API de GitHub est erronée.
 Elle constitue aussi un exemple de gestion de `GitHubApiError`.
 
-Afficher l'aide.
+Affichez l'aide pour plus d'informations.
 ```
 python demo.py -h
 ```
@@ -91,7 +91,7 @@ pip install -r requirements-dev.txt
 The demo shows how to find out whether a request to the GitHub API is
 erroneous. It also constitutes an example of handling a `GitHubApiError`.
 
-Display the help.
+Display the help message for more information.
 ```
 python demo.py -h
 ```
