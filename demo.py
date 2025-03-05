@@ -1,6 +1,7 @@
 """
 This script shows how function detect_github_api_error helps determining
 whether a response from the GitHub API is the result of an erroneous request.
+It also constitutes an example of handling a GitHubApiError.
 """
 
 
