@@ -69,9 +69,9 @@ failed. Its properties are the following.
 * `req_url`: the erroneous request's URL.
 
 Function `detect_github_api_error` examines data from the GitHub API and raises
-a `GitHubApiError` if the data is the result of an erroneous request. The data
-must be an object returned by the parsing of the response's content, which is
-in JSON.
+a `GitHubApiError` if it is the result of an erroneous request. The data must
+be an object returned by the parsing of the response's content, which is in
+JSON.
 
 The user should not raise a `GitHubApiError` themself and instead rely on
 `detect_github_api_error`.
