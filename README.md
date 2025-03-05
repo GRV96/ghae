@@ -28,9 +28,9 @@ de code source.
 
 ### Dépendances
 
-Installez les dépendances de `ghae` avant de l'utiliser.
+Cette commande installe les dépendances nécessaires au développement de `ghae`.
 ```
-pip install -r requirements.txt
+pip install -r requirements-dev.txt
 ```
 
 ### Démo
@@ -81,9 +81,9 @@ repository.
 
 ### Dependencies
 
-Install the dependencies before using `ghae`.
+This command installs the dependencies required for the development of `ghae`.
 ```
-pip install -r requirements.txt
+pip install -r requirements-dev.txt
 ```
 
 ### Demo
