@@ -13,8 +13,8 @@ _KEY_STATUS = "status"
 def detect_github_api_error(request_url, api_response_data):
 	"""
 	This function examines data from the GitHub API and raises a GitHubApiError
-	if the data is the result of an erroneous request. It is the case if the
-	data is a dictionary whose keys are "message", "documentation_url" and
+	if it is the result of an erroneous request. The request is erroneous if
+	the data is a dictionary whose keys are "message", "documentation_url" and
 	"status".
 
 	Args:
