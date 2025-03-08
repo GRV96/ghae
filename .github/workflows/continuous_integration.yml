@@ -9,19 +9,19 @@ on:
       - main
 
 jobs:
-  test_demos_no_error:
+  execute_unit_tests:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout the repository
         uses: actions/checkout@v2
-      - name: Intall dependencies
+      - name: Intall the dependencies
         run: pip3 install --no-cache-dir -r requirements-dev.txt
-      - name: Run the demo
-        run: python3 demo.py
+      - name: Execute the unit tests
+        run: pytest tests
   test_pypi_package_build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout the repository
         uses: actions/checkout@v2
-      - name: Test the build
+      - name: Test the package build
         run: python3 .github/workflows/test_pypi_package_build.py
