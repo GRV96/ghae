@@ -41,5 +41,11 @@ def test_error_detection_erroneous_request():
 	response_data = _load_whole_json_file(
 		_LOCAL_DIR/"response_to_erroneous_request.json")
 
-	with pytest.raises(GitHubApiError):
+	with pytest.raises(GitHubApiError) as e:
 		detect_github_api_error(_FAKE_URL, response_data)
+
+		assert e.message == "Not Found"
+		assert e.doc_url\
+			== "https://docs.github.com/rest/repos/repos#get-a-repository"
+		assert e.status == "404"
+		assert e.req_url == "https://api.github.com/repos/nobody/nothing"
