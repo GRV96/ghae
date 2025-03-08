@@ -16,8 +16,8 @@ import requests
 import sys
 
 from ghae import\
-	detect_github_api_error,\
-	GitHubApiError
+	GitHubApiError,\
+	detect_github_api_error
 
 
 def _make_arg_parser():
