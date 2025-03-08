@@ -54,7 +54,7 @@ fork = repo_data.get("fork")
 visibility = repo_data.get("visibility")
 topics = repo_data.get("topics")
 
-print(f"Request: {repo_url}\n")
+print(f"Request URL: {repo_url}\n")
 print("Repository data")
 print(f"ID: {id}")
 print(f"Name: {name}")
