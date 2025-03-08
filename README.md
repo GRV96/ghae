@@ -2,13 +2,13 @@
 
 ## FRANÇAIS
 
-Cette bibliothèque détecte l'échec des requêtes à l'API de GitHub et les
-signale en levant une exception.
+Cette bibliothèque détecte les réponses aux requêtes erronées à l'API de
+GitHub. Une exception signale ces erreurs.
 
 ### Contenu
 
-L'exception `GitHubApiError` indique qu'une requête à l'API de GitHub a échoué.
-Ses propriétés sont les suivantes.
+L'exception `GitHubApiError` peut être levée quand une réponse de l'API de
+GitHub indique que la requête était erronée. Ses propriétés sont les suivantes.
 
 * `message`: le message d'erreur.
 * `doc_url`: l'URL de la documentation de l'erreur.
@@ -55,13 +55,13 @@ python demo.py -r GRV96/gha
 
 ## ENGLISH
 
-This library detects failed requests to the GitHub API and signals them by
-raising an exception.
+This library detects the responses to erroneous requests to the GitHub API. An
+exception signals these errors.
 
 ### Content
 
-Exception `GitHubApiError` indicates that a request to the GitHub API has
-failed. Its properties are the following.
+Exception `GitHubApiError` can be raised when a response from the GitHub API
+indicates that the request was erroneous. Its properties are the following.
 
 * `message`: the error message.
 * `doc_url`: the URL to the error's documentation.
