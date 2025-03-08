@@ -46,6 +46,7 @@ except GitHubApiError as ge:
 	sys.exit(1)
 
 id = repo_data.get("id")
+name = repo_data.get("name")
 full_name = repo_data.get("full_name")
 description = repo_data.get("description")
 fork = repo_data.get("fork")
@@ -53,10 +54,10 @@ visibility = repo_data.get("visibility")
 topics = repo_data.get("topics")
 
 print(f"Request: {repo_url}\n")
-
 print("Repository data")
-print(f"Full name: {full_name}")
 print(f"ID: {id}")
+print(f"Name: {name}")
+print(f"Full name: {full_name}")
 print(f"Description: {description}")
 print(f"Fork: {fork}")
 print(f"Visibility: {visibility}")
