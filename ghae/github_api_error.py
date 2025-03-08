@@ -3,12 +3,15 @@
 
 class GitHubApiError(Exception):
 	"""
-	This exception can be raised when a request to the GitHub API fails.
+	This exception can be raised when a response from the GitHub API indicates
+	that the request was erroneous.
 	"""
 
 	def __init__(self, message, doc_url, status, req_url):
 		"""
-		The constructor needs the data relevant to the request's failure.
+		The constructor needs the data relevant to the request's failure. The
+		response to an erroneous request contains an error message, the URL to
+		the error's documentation and a status code.
 
 		Args:
 			message (str): the error message.
