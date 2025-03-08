@@ -2,8 +2,8 @@
 
 ## FRANÇAIS
 
-Cette bibliothèque détecte l'échec des requêtes à l'API de GitHub et les
-signale en levant une exception.
+Cette bibliothèque détecte les réponses aux requêtes erronées à l'API de
+GitHub. Une exception signale ces erreurs.
 
 ### Contenu
 
@@ -55,8 +55,8 @@ python demo.py -r GRV96/gha
 
 ## ENGLISH
 
-This library detects failed requests to the GitHub API and signals them by
-raising an exception.
+This library detects the responses to erroneous requests to the GitHub API. An
+exception signals these errors.
 
 ### Content
 
