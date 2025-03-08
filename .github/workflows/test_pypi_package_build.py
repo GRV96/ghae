@@ -1,7 +1,7 @@
 """
 This script is meant to run on GitHub's virtual machine ubuntu-latest in a CI
-workflow. It builds the PyPI package and installs it to ensure the
-installation works. However, the script does not upload the package to PyPI.
+workflow. It builds the PyPI package and installs it to ensure that the package
+works. However, the script does not upload the package to PyPI.
 """
 
 
