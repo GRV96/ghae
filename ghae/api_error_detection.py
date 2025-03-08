@@ -5,7 +5,7 @@ from .github_api_error import\
 	GitHubApiError
 
 
-_KEY_DOCUMENTATION_URL = "documentation_url"
+_KEY_DOC_URL = "documentation_url"
 _KEY_MESSAGE = "message"
 _KEY_STATUS = "status"
 
@@ -28,7 +28,7 @@ def detect_github_api_error(request_url, api_response_data):
 	"""
 	if isinstance(api_response_data, dict):
 		message = api_response_data.get(_KEY_MESSAGE)
-		doc_url = api_response_data.get(_KEY_DOCUMENTATION_URL)
+		doc_url = api_response_data.get(_KEY_DOC_URL)
 		status = api_response_data.get(_KEY_STATUS)
 
 		if message is not None and doc_url is not None and status is not None:
