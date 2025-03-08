@@ -14,6 +14,8 @@ _MODE_R = "r"
 _LOCAL_DIR = Path(__file__).resolve().parent
 _REPO_ROOT = _LOCAL_DIR.parent
 
+_FAKE_URL = "https://api.github.com/repos/nobody/nothing"
+
 
 sp_append(_REPO_ROOT)
 from ghae import\
@@ -32,7 +34,7 @@ def test_error_detection_valid_request():
 		_LOCAL_DIR/"response_to_valid_request.json")
 
 	# Success if GitHubApiError is not raised.
-	detect_github_api_error("No request for tests", response_data)
+	detect_github_api_error(_FAKE_URL, response_data)
 
 
 def test_error_detection_erroneous_request():
@@ -40,4 +42,4 @@ def test_error_detection_erroneous_request():
 		_LOCAL_DIR/"response_to_erroneous_request.json")
 
 	with pytest.raises(GitHubApiError):
-		detect_github_api_error("No request for tests", response_data)
+		detect_github_api_error(_FAKE_URL, response_data)
