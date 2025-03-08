@@ -1,0 +1,27 @@
+name: Continuous integration
+
+on:
+  pull_request:
+    branches:
+      - "*"
+  push:
+    branches:
+      - main
+
+jobs:
+  test_demos_no_error:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout the repository
+        uses: actions/checkout@v2
+      - name: Intall dependencies
+        run: pip3 install --no-cache-dir -r requirements-dev.txt
+      - name: Run the demo
+        run: python3 demo.py
+  test_pypi_package_build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout the repository
+        uses: actions/checkout@v2
+      - name: Test the build
+        run: python3 .github/workflows/test_pypi_package_build.py
