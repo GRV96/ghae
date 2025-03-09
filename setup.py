@@ -36,14 +36,13 @@ if __name__ == "__main__":
 
 	setuptools.setup(
 		name = "ghae",
-		version = "0.0.0",
+		version = "0.0.1",
 		author = "Guyllaume Rousseau",
 		description = short_desc,
 		long_description = long_desc,
 		long_description_content_type = "text/markdown",
 		url = "https://github.com/GRV96/ghae",
 		classifiers = [
-			"Private :: Do Not Upload", # Remove when ready to publish.
 			"Development Status :: 5 - Production/Stable",
 			"Intended Audience :: Developers",
 			"License :: OSI Approved :: MIT License",
