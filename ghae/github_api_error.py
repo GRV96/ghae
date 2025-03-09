@@ -1,5 +1,7 @@
 # __all__ declared at the module's end
 
+_PERIOD = '.'
+
 
 class GitHubApiError(Exception):
 	"""
@@ -30,7 +32,12 @@ class GitHubApiError(Exception):
 			+ f"'{self._status}', '{self._req_url}')"
 
 	def __str__(self):
-		return f"[{self._req_url}] {self._status}: {self._message}"\
+		msg = self._message
+
+		if len(msg) > 0 and msg[-1] != _PERIOD:
+			msg += _PERIOD
+
+		return f"[{self._req_url}] {self._status}: {msg}"\
 			+ f" Documentation: {self._doc_url}"
 
 	@property
