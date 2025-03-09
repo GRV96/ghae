@@ -4,7 +4,7 @@
 class GitHubApiError(Exception):
 	"""
 	This exception can be raised when a response from the GitHub API indicates
-	that the request was erroneous.
+	that the request is erroneous.
 	"""
 
 	def __init__(self, message, doc_url, status, req_url):
