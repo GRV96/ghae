@@ -41,8 +41,8 @@ repo_data = json.loads(repo_response.content)
 # Error detection
 try:
 	detect_github_api_error(repo_url, repo_data)
-except GitHubApiError as ge:
-	print(ge)
+except GitHubApiError as gae:
+	print(gae)
 	sys.exit(1)
 
 id = repo_data.get("id")
