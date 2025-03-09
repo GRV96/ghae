@@ -20,8 +20,8 @@ GitHub et lève `GitHubApiError` si elles résultent d'une requête erronée. Le
 données doivent être un objet produit par la lecture du contenu de la réponse,
 qui est en JSON.
 
-L'utilisateur ne devrait pas lever `GitHubApiError` lui-même et plutôt se fier
-à `detect_github_api_error`.
+L'utilisateur devrait se fier à `detect_github_api_error` plutôt que lever
+`GitHubApiError` lui-même.
 
 Pour plus d'informations, consultez la documentation et la démo dans le dépôt
 de code source.
@@ -80,8 +80,8 @@ a `GitHubApiError` if it is the result of an erroneous request. The data must
 be an object returned by the parsing of the response's content, which is in
 JSON.
 
-The user should not raise a `GitHubApiError` themself and instead rely on
-`detect_github_api_error`.
+The user should rely on `detect_github_api_error` rather than raising
+`GitHubApiError` themself.
 
 For more information, consult the documentation and the demo in the source code
 repository.
