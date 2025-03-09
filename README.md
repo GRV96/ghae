@@ -8,7 +8,7 @@ GitHub. Une exception signale ces erreurs.
 ### Contenu
 
 L'exception `GitHubApiError` peut être levée quand une réponse de l'API de
-GitHub indique que la requête était erronée. Ses propriétés sont les suivantes.
+GitHub indique que la requête est erronée. Ses propriétés sont les suivantes.
 
 * `message`: le message d'erreur.
 * `doc_url`: l'URL de la documentation de l'erreur.
@@ -68,7 +68,7 @@ exception signals these errors.
 ### Content
 
 Exception `GitHubApiError` can be raised when a response from the GitHub API
-indicates that the request was erroneous. Its properties are the following.
+indicates that the request is erroneous. Its properties are the following.
 
 * `message`: the error message.
 * `doc_url`: the URL to the error's documentation.
