@@ -53,6 +53,13 @@ Cet exemple envoie une requête erronée.
 python demo.py -r GRV96/gha
 ```
 
+### Tests automatiques
+
+Cette commande exécute les tests automatiques.
+```
+pytest tests
+```
+
 ## ENGLISH
 
 This library detects the responses to erroneous requests to the GitHub API. An
@@ -104,4 +111,11 @@ python demo.py -r GRV96/ghae
 This example sends an erroneous request.
 ```
 python demo.py -r GRV96/gha
+```
+
+### Automated Tests
+
+This command executes the automated tests.
+```
+pytest tests
 ```
