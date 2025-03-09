@@ -36,7 +36,7 @@ if __name__ == "__main__":
 
 	setuptools.setup(
 		name = "ghae",
-		version = "0.0.1",
+		version = "1.0.0",
 		author = "Guyllaume Rousseau",
 		description = short_desc,
 		long_description = long_desc,
