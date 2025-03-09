@@ -30,7 +30,7 @@ class GitHubApiError(Exception):
 			+ f"'{self._status}', '{self._req_url}')"
 
 	def __str__(self):
-		return f"[{self._req_url}] {self._status}: {self._message}."\
+		return f"[{self._req_url}] {self._status}: {self._message}"\
 			+ f" Documentation: {self._doc_url}"
 
 	@property
