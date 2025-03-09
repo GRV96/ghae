@@ -1,6 +1,6 @@
 # __all__ declared at the module's end
 
-_PERIOD = '.'
+_PERIOD = "."
 
 
 class GitHubApiError(Exception):
