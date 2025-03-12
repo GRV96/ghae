@@ -45,9 +45,9 @@ def test_error_detection_erroneous_request():
 		detect_github_api_error(_FAKE_URL, response_data)
 
 	# The GitHubApiError instance
-	e = except_info.value
-	assert e.message == "Not Found"
-	assert e.doc_url\
+	gae = except_info.value
+	assert gae.message == "Not Found"
+	assert gae.doc_url\
 		== "https://docs.github.com/rest/repos/repos#get-a-repository"
-	assert e.status == "404"
-	assert e.req_url == "https://api.github.com/repos/nobody/nothing"
+	assert gae.status == "404"
+	assert gae.req_url == "https://api.github.com/repos/nobody/nothing"
