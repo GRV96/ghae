@@ -4,7 +4,7 @@ import json
 from pathlib import Path
 
 from syspathmodif import\
-	sp_append,\
+	sp_prepend,\
 	sp_remove
 
 
@@ -17,7 +17,7 @@ _REPO_ROOT = _LOCAL_DIR.parent
 _FAKE_URL = "https://api.github.com/repos/nobody/nothing"
 
 
-sp_append(_REPO_ROOT)
+sp_prepend(_REPO_ROOT)
 from ghae import\
 	GitHubApiError,\
 	detect_github_api_error
