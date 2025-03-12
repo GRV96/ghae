@@ -24,13 +24,13 @@ from ghae import\
 sp_remove(_REPO_ROOT)
 
 
-def _load_whole_json_file(json_path):
+def _load_json_file(json_path):
 	with json_path.open(mode=_MODE_R, encoding=_ENCODING_UTF8) as json_file:
 		return json.load(json_file)
 
 
 def test_error_detection_valid_request():
-	response_data = _load_whole_json_file(
+	response_data = _load_json_file(
 		_LOCAL_DIR/"response_to_valid_request.json")
 
 	# Success if GitHubApiError is not raised.
@@ -38,7 +38,7 @@ def test_error_detection_valid_request():
 
 
 def test_error_detection_erroneous_request():
-	response_data = _load_whole_json_file(
+	response_data = _load_json_file(
 		_LOCAL_DIR/"response_to_erroneous_request.json")
 
 	with pytest.raises(GitHubApiError) as except_info:
